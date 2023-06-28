@@ -102,6 +102,71 @@
         </div>
     </section> 
 
+    <section class="grupo" id="grupo">
+        <h1 class="encabezado"> <!--heading-->
+        
+
+            <span>V</span>
+            <span>i</span>
+
+            <span>d</span>
+            <span>e</span>
+            <span>o</span>
+            <span>s</span>
+            
+        </h1>
+
+        <div class="container">
+
+            <div class="main-video">
+                <div class="video ">
+                    <video src="../img/about-product.mp4" controls ></video>
+                    <h3 class="title">01.About Product</h3>
+                </div>
+         
+            </div>
+        
+            <div class="video-list">
+                <div class="vid active ">
+                    <video src="../img/about-product.mp4" controls ></video>
+                    <h3 class="title">01.About Product</h3>
+                </div>
+                <div class="vid ">
+                    <video src="../img/about-us.mp4" controls></video>
+                    <h3 class="title">02.About us</h3>
+                </div>
+                <div class="vid ">
+                    <video src="../img/about-team.mp4" controls></video>
+                    <h3 class="title">03.About team</h3>
+                </div>
+        
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+    
+        listVideo.forEach(video =>{
+            video.onclick = () =>{
+               listVideo.forEach(vid=> vid.classList.remove('active'));
+               video.classList.add ('active');
+               if(video.classList.contains ('active')){
+                    let src =video.children[0].getAttribute('src');
+                     mainVideo.src =src;
+                     let text =video.children[1].innerHTML;
+                     title.innerHTML =text;
+               };
+            };
+        });
+    
+    </script>
+    
+
     
     <section class="servicios" id="servicios">
         <h1 class="encabezado"> <!--heading-->

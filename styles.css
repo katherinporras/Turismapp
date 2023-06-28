@@ -545,6 +545,108 @@ header .barra-busqueda #search-bar label:hover{
    box-shadow:  0 1rem 2rem rgba(0, 0, 0, 0.1); 
 }
 
+.grupo .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:15px;
+    align-items: flex-start;
+    padding: 5px 5%; 
+}
+.grupo .container .main-video{
+    background: #fff;
+    border-radius: .5px;
+    padding: 10px
+}
+.grupo .container .main-video video{
+    width: 100%;
+    border-radius: 5px;
+}
+.grupo .container .main-video .title{
+   color: #333;
+   font-size: 23px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+.grupo .container .video-list{
+    background: #fff;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+.grupo .container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.grupo .container .video-list::-webkit-scrollbar-track{
+   background: #ccc;
+   border-radius: 50px;
+}
+.grupo .container .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+.grupo .container .video-list .vid video{
+   width: 150px;
+   border-radius: 5px;
+}
+.grupo .container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    background: #f7f7f7;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer; 
+}
+.grupo .container .video-list .vid:hover{
+    background: #eee;
+}
+.grupo .container .video-list .vid.active{
+    background: #2980b9;
+}
+.grupo .container .video-list .vid.active .title{
+    color:#fff;
+}
+.grupo .container .video-list .vid .title{
+    color:#333;
+    font-size: 17px;
+}
+@media(max-width: 991px){
+    .grupo .container{
+        grid-template-columns: 2fr 1fr;
+        padding: 10px; 
+    }
+}
+
+@media(max-width: 768px){
+    .grupo .container{
+  
+        grid-template-columns:1fr;
+        
+        padding: 10px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Parte de hoteles*/
 /* room */
 
